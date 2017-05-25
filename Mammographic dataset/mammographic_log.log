@@ -1,0 +1,176 @@
+[pmahend1@mba-i2 ~]$ hadoop jar /users/pmahend1/Jars/RandomForest_group3.jar randomForest.group3.RandomForest Mammographic/mammographic_attribute.txt Mammographic/mammographic_masses.data.txt Mammographic/ActionRulesOutput Mammographic/AssociationActionRulesOutput
+-------------Random Forest Algorithm------------
+Available attributes are: [birads, age, shape, margin, density, severity]
+Please enter the Stable Attribute(s):
+birads,age,shape
+Stable Attribute(s): [birads, age, shape]
+Available Attribute(s): [margin, density, severity]
+1. Enter the Decision Attribute:
+severity
+
+Available decision attributes are: [severity0, severity1]
+Enter decision FROM attribute:
+severity0
+Enter decision TO Attribute:
+severity1
+Stable attributes are: [birads, age, shape]
+Decision attribute is: [severity]
+Decision FROM : severity0
+Decision TO : severity1
+Flexible Attribute(s) are: [margin, density]
+Please enter minimum Support:
+2
+Please enter minimum Confidence %:
+70
+16/11/06 19:40:52 INFO hdfs.DFSClient: Created token for pmahend1: HDFS_DELEGATION_TOKEN owner=pmahend1@ITS.UNCC.EDU, renewer=yarn, realUser=, issueDate=1478479252205, maxDate=1479084052205, sequenceNumber=9325, masterKeyId=157 on ha-hdfs:dsba
+16/11/06 19:40:52 INFO security.TokenCache: Got dt for hdfs://dsba; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:dsba, Ident: (token for pmahend1: HDFS_DELEGATION_TOKEN owner=pmahend1@ITS.UNCC.EDU, renewer=yarn, realUser=, issueDate=1478479252205, maxDate=1479084052205, sequenceNumber=9325, masterKeyId=157)
+16/11/06 19:40:52 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+16/11/06 19:40:52 INFO input.FileInputFormat: Total input paths to process : 1
+16/11/06 19:40:52 INFO mapreduce.JobSubmitter: number of splits:5
+16/11/06 19:40:52 INFO Configuration.deprecation: mapred.max.split.size is deprecated. Instead, use mapreduce.input.fileinputformat.split.maxsize
+16/11/06 19:40:52 INFO Configuration.deprecation: mapred.min.split.size is deprecated. Instead, use mapreduce.input.fileinputformat.split.minsize
+16/11/06 19:40:53 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1470409205513_8414
+16/11/06 19:40:53 INFO mapreduce.JobSubmitter: Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:dsba, Ident: (token for pmahend1: HDFS_DELEGATION_TOKEN owner=pmahend1@ITS.UNCC.EDU, renewer=yarn, realUser=, issueDate=1478479252205, maxDate=1479084052205, sequenceNumber=9325, masterKeyId=157)
+16/11/06 19:40:53 INFO impl.YarnClientImpl: Submitted application application_1470409205513_8414
+16/11/06 19:40:53 INFO mapreduce.Job: The url to track the job: http://mba-hm1.uncc.edu:8088/proxy/application_1470409205513_8414/
+16/11/06 19:40:53 INFO mapreduce.Job: Running job: job_1470409205513_8414
+16/11/06 19:41:25 INFO mapreduce.Job: Job job_1470409205513_8414 running in uber mode : false
+16/11/06 19:41:25 INFO mapreduce.Job:  map 0% reduce 0%
+16/11/06 19:41:44 INFO mapreduce.Job:  map 20% reduce 0%
+16/11/06 19:41:45 INFO mapreduce.Job:  map 60% reduce 0%
+16/11/06 19:41:47 INFO mapreduce.Job:  map 80% reduce 0%
+16/11/06 19:41:48 INFO mapreduce.Job:  map 93% reduce 0%
+16/11/06 19:41:49 INFO mapreduce.Job:  map 100% reduce 0%
+16/11/06 19:41:59 INFO mapreduce.Job:  map 100% reduce 100%
+16/11/06 19:42:01 INFO mapreduce.Job: Job job_1470409205513_8414 completed successfully
+16/11/06 19:42:01 INFO mapreduce.Job: Counters: 49
+        File System Counters
+                FILE: Number of bytes read=3055
+                FILE: Number of bytes written=763850
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=21665
+                HDFS: Number of bytes written=1648
+                HDFS: Number of read operations=18
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+        Job Counters
+                Launched map tasks=5
+                Launched reduce tasks=1
+                Data-local map tasks=5
+                Total time spent by all maps in occupied slots (ms)=171822
+                Total time spent by all reduces in occupied slots (ms)=19730
+                Total time spent by all map tasks (ms)=85911
+                Total time spent by all reduce tasks (ms)=9865
+                Total vcore-seconds taken by all map tasks=85911
+                Total vcore-seconds taken by all reduce tasks=9865
+                Total megabyte-seconds taken by all map tasks=175945728
+                Total megabyte-seconds taken by all reduce tasks=20203520
+        Map-Reduce Framework
+                Map input records=500
+                Map output records=180
+                Map output bytes=22611
+                Map output materialized bytes=3607
+                Input split bytes=660
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=169
+                Reduce shuffle bytes=3607
+                Reduce input records=180
+                Reduce output records=11
+                Spilled Records=360
+                Shuffled Maps =5
+                Failed Shuffles=0
+                Merged Map outputs=5
+                GC time elapsed (ms)=1870
+                CPU time spent (ms)=31060
+                Physical memory (bytes) snapshot=3922235392
+                Virtual memory (bytes) snapshot=23549698048
+                Total committed heap usage (bytes)=4859625472
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=21005
+        File Output Format Counters
+                Bytes Written=1648
+16/11/06 19:42:01 INFO hdfs.DFSClient: Created token for pmahend1: HDFS_DELEGATION_TOKEN owner=pmahend1@ITS.UNCC.EDU, renewer=yarn, realUser=, issueDate=1478479321988, maxDate=1479084121988, sequenceNumber=9326, masterKeyId=157 on ha-hdfs:dsba
+16/11/06 19:42:01 INFO security.TokenCache: Got dt for hdfs://dsba; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:dsba, Ident: (token for pmahend1: HDFS_DELEGATION_TOKEN owner=pmahend1@ITS.UNCC.EDU, renewer=yarn, realUser=, issueDate=1478479321988, maxDate=1479084121988, sequenceNumber=9326, masterKeyId=157)
+16/11/06 19:42:02 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+16/11/06 19:42:02 INFO input.FileInputFormat: Total input paths to process : 1
+16/11/06 19:42:02 INFO mapreduce.JobSubmitter: number of splits:5
+16/11/06 19:42:03 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1470409205513_8415
+16/11/06 19:42:03 INFO mapreduce.JobSubmitter: Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:dsba, Ident: (token for pmahend1: HDFS_DELEGATION_TOKEN owner=pmahend1@ITS.UNCC.EDU, renewer=yarn, realUser=, issueDate=1478479321988, maxDate=1479084121988, sequenceNumber=9326, masterKeyId=157)
+16/11/06 19:42:03 INFO impl.YarnClientImpl: Submitted application application_1470409205513_8415
+16/11/06 19:42:03 INFO mapreduce.Job: The url to track the job: http://mba-hm1.uncc.edu:8088/proxy/application_1470409205513_8415/
+16/11/06 19:42:03 INFO mapreduce.Job: Running job: job_1470409205513_8415
+16/11/06 19:42:26 INFO mapreduce.Job: Job job_1470409205513_8415 running in uber mode : false
+16/11/06 19:42:26 INFO mapreduce.Job:  map 0% reduce 0%
+16/11/06 19:42:42 INFO mapreduce.Job:  map 60% reduce 0%
+16/11/06 19:42:45 INFO mapreduce.Job:  map 80% reduce 0%
+16/11/06 19:42:48 INFO mapreduce.Job:  map 100% reduce 0%
+16/11/06 19:43:04 INFO mapreduce.Job:  map 100% reduce 100%
+16/11/06 19:43:05 INFO mapreduce.Job: Job job_1470409205513_8415 completed successfully
+16/11/06 19:43:05 INFO mapreduce.Job: Counters: 50
+        File System Counters
+                FILE: Number of bytes read=2331
+                FILE: Number of bytes written=762769
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=21665
+                HDFS: Number of bytes written=2216
+                HDFS: Number of read operations=18
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+        Job Counters
+                Launched map tasks=5
+                Launched reduce tasks=1
+                Data-local map tasks=4
+                Rack-local map tasks=1
+                Total time spent by all maps in occupied slots (ms)=112118
+                Total time spent by all reduces in occupied slots (ms)=27956
+                Total time spent by all map tasks (ms)=56059
+                Total time spent by all reduce tasks (ms)=13978
+                Total vcore-seconds taken by all map tasks=56059
+                Total vcore-seconds taken by all reduce tasks=13978
+                Total megabyte-seconds taken by all map tasks=114808832
+                Total megabyte-seconds taken by all reduce tasks=28626944
+        Map-Reduce Framework
+                Map input records=500
+                Map output records=115
+                Map output bytes=14022
+                Map output materialized bytes=3053
+                Input split bytes=660
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=96
+                Reduce shuffle bytes=3053
+                Reduce input records=115
+                Reduce output records=16
+                Spilled Records=230
+                Shuffled Maps =5
+                Failed Shuffles=0
+                Merged Map outputs=5
+                GC time elapsed (ms)=1752
+                CPU time spent (ms)=10500
+                Physical memory (bytes) snapshot=3372052480
+                Virtual memory (bytes) snapshot=23509757952
+                Total committed heap usage (bytes)=4585422848
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=21005
+        File Output Format Counters
+                Bytes Written=2216
+[pmahend1@mba-i2 ~]$
